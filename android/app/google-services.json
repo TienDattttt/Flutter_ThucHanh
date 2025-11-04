@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627672977436",
+    "project_id": "photoshare-61612",
+    "storage_bucket": "photoshare-61612.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627672977436:android:67e8c96407a9863ec7cfd9",
+        "android_client_info": {
+          "package_name": "com.example.photo_sharing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBad6xU-vsPaekAjKK_KADAoqvQNErg3B4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
