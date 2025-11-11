@@ -1,0 +1,47 @@
+[
+  {
+    "category": "Sử Thi",
+    "books": [
+      {
+        "title": "Iliad",
+        "author": "Homer",
+        "thumbnail": "assets/images/iliad.png",
+        "epubPath": "suthi/Iliad - Homer.epub"
+      },
+      {
+        "title": "Ramayana",
+        "author": "Valmiki",
+        "thumbnail": "assets/images/ramayana.png",
+        "epubPath": "suthi/Ramayana - Valmiki.epub"
+      }
+    ]
+  },
+  {
+    "category": "Trinh Thám",
+    "books": [
+      {
+        "title": "Cô Gái Đến Từ Milan",
+        "author": "Giorgio Scerbanenco",
+        "thumbnail": "assets/images/co-gai-milan.png",
+        "epubPath": "trinhtham/Cô Gái Đến Từ Milan - Giorgio Scerbanenco & Mai Trang (dịch).epub"
+      },
+      {
+        "title": "Tàn Lửa",
+        "author": "Shizukui Shusuke",
+        "thumbnail": "assets/images/tan-lua.png",
+        "epubPath": "trinhtham/Tàn Lửa - Shizukui Shusuke & Dương Hoa (dịch).epub"
+      }
+    ]
+  },
+  {
+    "category": "18+",
+    "books": [
+      {
+        "title": "Nhật Ký Gái Gọi Có Chồng",
+        "author": "Tracy Quan",
+        "thumbnail": "assets/images/nhat-ky-gai-goi.png",
+        "epubPath": "18+/Nhật Ký Gái Gọi Có Chồng - Tracy Quan.epub"
+      }
+    ]
+  }
+]
