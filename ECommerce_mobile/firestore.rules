@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function để kiểm tra user đã đăng nhập
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    // Helper function để kiểm tra user là chủ sở hữu
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    // Users collection - Delivery Info subcollection
+    match /users/{userId}/deliveryInfo/{deliveryInfoId} {
+      // Cho phép đọc nếu user là chủ sở hữu
+      allow read: if isSignedIn() && isOwner(userId);
+      
+      // Cho phép tạo delivery info mới
+      allow create: if isSignedIn() && isOwner(userId);
+      
+      // Cho phép update nếu user là chủ sở hữu
+      allow update: if isSignedIn() && isOwner(userId);
+      
+      // Cho phép delete nếu user là chủ sở hữu
+      allow delete: if isSignedIn() && isOwner(userId);
+    }
+    
+    // Orders collection
+    match /orders/{orderId} {
+      // Cho phép đọc nếu user là chủ sở hữu order
+      allow read: if isSignedIn() && isOwner(resource.data.userId);
+      
+      // Cho phép tạo order mới
+      allow create: if isSignedIn() 
+                    && request.resource.data.userId == request.auth.uid;
+      
+      // Không cho phép update hoặc delete
+      allow update, delete: if false;
+    }
+    
+    // Chặn tất cả các collection khác
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
